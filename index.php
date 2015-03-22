@@ -74,6 +74,7 @@ if (isset($error)) {
 /* パラメーターが問題ない場合の処理　*/
   /* 画像の読み込み */
   $image = new Imagick($_GET['src']); //インスタンスを作る
+  $image->setImageFormat('png'); //pngに変換
   $image->setImageOpacity ($_GET['opacity']); //透過
 
   /* 画像を出力 */
