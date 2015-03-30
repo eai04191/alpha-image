@@ -1,3 +1,4 @@
+<!-- test -->
 <?php
 $ownURL = (empty($_SERVER["HTTPS"]) ? "http://" : "https://") . $_SERVER["HTTP_HOST"] . $_SERVER["SCRIPT_NAME"];
 
