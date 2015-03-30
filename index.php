@@ -80,7 +80,7 @@ if (isset($error)) {
   /* 画像の読み込み */
   $image = new Imagick($_GET['src']); //インスタンスを作る
   $image->setImageFormat('png'); //pngに変換
-  $image->setImageOpacity ($_GET['opacity']); //透過
+  $image->evaluateImage(Imagick::EVALUATE_MULTIPLY, $_GET['opacity'], Imagick::CHANNEL_ALPHA); //透過
 
   /* 画像を出力 */
   header("Content-Type: image/png");
